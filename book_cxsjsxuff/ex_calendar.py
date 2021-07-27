@@ -32,7 +32,20 @@ def print_calendar(year, w):
 
 
 def heading(m):
-    months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
+    months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sept",
+        "Oct",
+        "Nov",
+        "Dec",
+    ]
     print(" %s " % (months[m]))
     print("Mon Tue Wed Thu Fri Sat Sun")
 
@@ -53,20 +66,20 @@ def days(y, m):
 
 
 def layout(first, d):
-    frame = 42 * ['']
+    frame = 42 * [""]
     if first == 0:
         first = 7
     j = first - 1
     for i in range(1, d + 1):
-        frame[j] = '%d' % i
+        frame[j] = "%d" % i
         j = j + 1
     return frame
 
 
 def print_month(frame):
     for i in range(42):
-        print("%3s " % (frame[i]), end='')
-        if (i+1) % 7 == 0:
+        print("%3s " % (frame[i]), end="")
+        if (i + 1) % 7 == 0:
             pass
             print()
 

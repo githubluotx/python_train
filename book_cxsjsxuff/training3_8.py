@@ -15,23 +15,12 @@ def train_3_12(radius):
 def train_3_13():
     """calculate the distance between two point
     input:two point coordinate, use tuple type"""
-    x1 = int(input('input x1:'))
-    y1 = int(input('input y1:'))
-    x2 = int(input('input x2:'))
-    y2 = int(input('input y2:'))
+    x1 = int(input("input x1:"))
+    y1 = int(input("input y1:"))
+    x2 = int(input("input x2:"))
+    y2 = int(input("input y2:"))
     dist = math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
-    print('\n the distance is:%.3f' % dist)
-
-
-def train_4_8_():
-    num = int(input("input the number:"))
-    if num > 0:
-        print("Positive")
-    elif num < 0:
-        print('Negative')
-    else:
-        print("Zero")
-    return 0
+    print("\n the distance is:%.3f" % dist)
 
 
 def train_cal_bmi():
@@ -86,11 +75,39 @@ def train_3_23():
         print("F")
 
 
-# Train_JudgePosOrNag()
-# Train_CalBMI()
-# print(str(train_2_8_12(4)))
+def train_4_10():
+    num = int(input("input the number:"))
+    if num > 0:
+        print("Positive")
+    elif num < 0:
+        print("Negative")
+    else:
+        print("Zero")
+    return 0
+
+
+def train_4_11():
+    # high = float(input("input the high(m):"))
+    # weight = float(input("input the weight(KG):"))
+    # bmi = weight / (high * high)
+
+    # str.split(str="", num=string.count(str))
+    # split()指定分隔符对字符串进行切片，如果参数 num 有指定值，则分隔 num+1 个子字符串
+    t0, t1 = input("input high and weight(m, KG):").split(",")
+    bmi = float(t1) / float(t0) ** 2
+    if bmi < 19:
+        print("Light")
+    elif bmi < 25:
+        print("Normal")
+    elif bmi < 28:
+        print("Overweight")
+    else:
+        print("Fat")
+
+
 # train_2_8_13()
 # train_3_14()
 # train_3_15()
 # train_3_22()
-train_3_23()
+# train_3_23()
+train_4_11()
