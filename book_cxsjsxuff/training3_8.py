@@ -105,9 +105,16 @@ def train_4_11():
         print("Fat")
 
 
+def train4_13():
+    year = int(input("input the year:"))
+    is_leap = ((year % 4 == 0) and (year % 100 != 0)) or (year % 400 == 0)
+    print(is_leap)
+
+
 # train_2_8_13()
 # train_3_14()
 # train_3_15()
 # train_3_22()
 # train_3_23()
-train_4_11()
+# train_4_11()
+train4_13()
