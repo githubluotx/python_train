@@ -75,46 +75,7 @@ def train_3_23():
         print("F")
 
 
-def train_4_10():
-    num = int(input("input the number:"))
-    if num > 0:
-        print("Positive")
-    elif num < 0:
-        print("Negative")
-    else:
-        print("Zero")
-    return 0
-
-
-def train_4_11():
-    # high = float(input("input the high(m):"))
-    # weight = float(input("input the weight(KG):"))
-    # bmi = weight / (high * high)
-
-    # str.split(str="", num=string.count(str))
-    # split()指定分隔符对字符串进行切片，如果参数 num 有指定值，则分隔 num+1 个子字符串
-    t0, t1 = input("input high and weight(m, KG):").split(",")
-    bmi = float(t1) / float(t0) ** 2
-    if bmi < 19:
-        print("Light")
-    elif bmi < 25:
-        print("Normal")
-    elif bmi < 28:
-        print("Overweight")
-    else:
-        print("Fat")
-
-
-def train4_13():
-    year = int(input("input the year:"))
-    is_leap = ((year % 4 == 0) and (year % 100 != 0)) or (year % 400 == 0)
-    print(is_leap)
-
-
-# train_2_8_13()
 # train_3_14()
 # train_3_15()
 # train_3_22()
 # train_3_23()
-# train_4_11()
-train4_13()
