@@ -49,4 +49,24 @@ def train14():
         print("error operator symbol")
 
 
-train14()
+def train15():
+    """ Fibonacci the first number more than 100
+    """
+    num = [0, 1, 1]
+    while num[2] < 100:
+        num[0], num[1] = num[1], num[2]
+        num[2] = num[0] + num[1]
+    print("the first number more than 100 in Fibonacci is: {}".format(num[2]))
+
+
+def train16():
+    n = int(input("input the n:"))
+    sum_n = 0
+    for i in range(1, n + 1):
+        sum_n = i * 10 + i + sum_n
+    print("the sum is: {}".format(sum_n))
+
+
+# train14()
+# train15()
+train16()
