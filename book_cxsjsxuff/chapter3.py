@@ -67,6 +67,42 @@ def train16():
     print("the sum is: {}".format(sum_n))
 
 
+def train17():
+    price = float(input("input the price of the thing(<=1):"))
+    price = 100 - int(price * 100)
+    remain = {"50": 0, "20": 0, "10": 0, "5": 0, "2": 0, "1": 0}
+    for key in remain.keys():
+        remain[key] = int(price / int(key))
+        price = price % int(key)
+    print("5角:{}, 2角:{}, 1角:{}, 5分:{}, 2分:{}, 1分:{}".format(
+        remain["50"], remain["20"], remain["10"], remain["5"], remain["2"], remain["1"]
+    ))
+
+
+def train18():
+    score = input("input the score(split by ',':").split(",")
+    num = int(score[0])
+    total = 0
+    qualified = 0
+    for idx in range(1 , num + 1):
+        add = int(score[idx])
+        if add > 59:
+            qualified = qualified + 1
+            total = total + add
+    print("the qualified number is:{}, the sum of score is:{}".format(qualified, total))
+
+
+def train19():
+    total = 0
+    for n in range(1000):
+        if (n % 3 == 0) and (n % 5 != 0):
+            total = total + n
+    print("the sum is:{}".format(total))
+
+
 # train14()
 # train15()
-train16()
+# train16()
+# train17()
+# train18()
+train19()
