@@ -50,8 +50,7 @@ def train14():
 
 
 def train15():
-    """ Fibonacci the first number more than 100
-    """
+    """Fibonacci the first number more than 100"""
     num = [0, 1, 1]
     while num[2] < 100:
         num[0], num[1] = num[1], num[2]
@@ -74,9 +73,16 @@ def train17():
     for key in remain.keys():
         remain[key] = int(price / int(key))
         price = price % int(key)
-    print("5角:{}, 2角:{}, 1角:{}, 5分:{}, 2分:{}, 1分:{}".format(
-        remain["50"], remain["20"], remain["10"], remain["5"], remain["2"], remain["1"]
-    ))
+    print(
+        "5角:{}, 2角:{}, 1角:{}, 5分:{}, 2分:{}, 1分:{}".format(
+            remain["50"],
+            remain["20"],
+            remain["10"],
+            remain["5"],
+            remain["2"],
+            remain["1"],
+        )
+    )
 
 
 def train18():
@@ -84,7 +90,7 @@ def train18():
     num = int(score[0])
     total = 0
     qualified = 0
-    for idx in range(1 , num + 1):
+    for idx in range(1, num + 1):
         add = int(score[idx])
         if add > 59:
             qualified = qualified + 1
@@ -100,9 +106,45 @@ def train19():
     print("the sum is:{}".format(total))
 
 
+def train20():
+    while True:
+        s = input("input the number m, n(m < n), or input exit to exit:")
+        if s == "exit":
+            break
+        m, n = s.split(",")
+        m = int(m)
+        n = int(n)
+        total = 0
+        if m % 2 == 0:
+            m = m + 1
+        if m <= n:
+            for num in range(m, n, 2):
+                total = total + num
+            print("the sum is :{}".format(total))
+        else:
+            print("error: m should less than n")
+
+
+def train21():
+    p = 1
+    last = 1
+    diff = 1
+    n = 2
+    while diff > 0.00000001:
+        new = (-1)**(n - 1) / (2 * n - 1)
+        if n % 2 == 0:
+            diff = last - new
+        last = new
+        p = p + new
+        n = n + 1
+    print("the pi is:{}".format(4 * p))
+
+
 # train14()
 # train15()
 # train16()
 # train17()
 # train18()
-train19()
+# train19()
+# train20()
+train21()
