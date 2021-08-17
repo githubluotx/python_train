@@ -1,3 +1,6 @@
+import calendar_modify
+
+
 def train14():
     lyrics = """        歌唱祖国
             --王莘
@@ -70,5 +73,10 @@ def train15():
     print("the k is: {}, the y0 is: {}".format(k, y0))
 
 
+def train16():
+    calendar_modify.main()
+
+
 # train14()
-train15()
+# train15()
+train16()

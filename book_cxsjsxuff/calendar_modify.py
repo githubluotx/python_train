@@ -86,11 +86,7 @@ def days(y, m):
 
 
 def layout(first, d):
-    frame = [42 * [""]] + [42 * [""]] + [42 * [""]] + [42 * [""]]
-    #
-    # for month in range(4):
-    #     for idx in range(42):
-    #         frame[month][idx] = ""
+    frame = [42 * [""] for i in range(4)]   # + [42 * [""]] + [42 * [""]] + [42 * [""]]
 
     for idx in range(4):
         if first[idx] == 0:
@@ -117,4 +113,4 @@ def main():
     print_calendar(year, w)
 
 
-main()
+# main()
